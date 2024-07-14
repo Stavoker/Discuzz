@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import MobileNav from './mobileNav';
+
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import MobileNav from './MobileNav';
+
 
 const Navbar = () => {
   return (
@@ -12,8 +14,8 @@ const Navbar = () => {
       <Link href="/" className='flex items-center gap-1'>
         <div className='flex items-center gap-[10px]'>
           <Image src="/icons/kayf-logo.png"
-            width={50}
-            height={50}
+            width={60}
+            height={60}
             alt='Yoom Logo'
             className='max-sm:size-10' />
 
