@@ -16,13 +16,13 @@ const Navbar = () => {
       <Link href="/" className='flex items-center gap-1'>
         <div className='flex items-center gap-[10px]'>
           <Image src="/icons/kayf-logo.png"
-            width={60}
-            height={60}
+            width={56}
+            height={56}
             alt='Yoom Logo'
             className='max-sm:size-10' />
 
           <p className='text-[26px] font-extrabold text-white 
-          max-sm:hidden mt-4'>KAYF</p>
+          max-sm:hidden mt-3'>KAYF</p>
           </div>
       </Link>
 

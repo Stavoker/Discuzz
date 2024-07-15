@@ -20,18 +20,18 @@ const MobileNav = () => {
             width={36}
             height={36}
             alt="hamburger icon"
-            className="cursor-pointer sm:hidden"
+            className="cursor-pointer mobile-nav"
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-dark-1">
           <Link href="/" className="flex items-center gap-1">
             <Image
-              src="/icons/logo.svg"
+              src="/icons/kayf-logo.png"
               width={32}
               height={32}
-              alt="yoom logo"
+              alt="kayf logo"
             />
-            <p className="text-[26px] font-extrabold text-white">YOOM</p>
+            <p className="text-[26px] font-extrabold text-white">KAYF</p>
           </Link>
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
             <SheetClose asChild>
@@ -54,8 +54,8 @@ const MobileNav = () => {
                         <Image
                           src={item.imgUrl}
                           alt={item.label}
-                          width={20}
-                          height={20}
+                          width={30}
+                          height={30}
                         />
                         <p className="font-semibold">{item.label}</p>
                       </Link>

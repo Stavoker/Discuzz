@@ -41,6 +41,11 @@
   border-color: #fff;
 }
 
+.cl-internal-1j7ahlv {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -116,6 +121,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-nav {
+    display: block;
+  }
 }
 
 .group:hover.card {

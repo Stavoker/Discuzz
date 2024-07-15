@@ -6,7 +6,7 @@ const TextChanger = () => {
     const texts = [
         "KAYF: Your Daily Dose of Fun!",
         "Chat with KAYF - Feel the Vibe!",
-        "KAYF: Where Conversations Come Alive!",
+        "KAYF: Know All Your Friends",
         "Join KAYF and Share the Joy!",
         "KAYF: Connect, Share, Enjoy!",
         "Experience the Buzz with KAYF!",
@@ -25,7 +25,7 @@ const TextChanger = () => {
         <div>
             <h2
                 key={currentIndex} // Add a unique key that changes when the text changes
-                className={`max-w-[300px] rounded text-center text-base font-normal animate`}
+                className={`max-w-[300px] rounded text-center text-base font-500 animate`}
             >
                 {texts[currentIndex]}
             </h2>
