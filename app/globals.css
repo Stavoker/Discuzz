@@ -36,6 +36,16 @@
   color: rgb(43, 122, 240);
 }
 
+.bg-image {
+  background-image: url("../public/icons/cr-icon.png");
+
+  background-position: center;
+}
+
+.bg-primary {
+  background-color: #4747476b !important;
+}
+
 .cl-internal-4b57d1 {
   color: #fff;
   border-color: #fff;
@@ -139,8 +149,29 @@
 }
 
 .str-video {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(320deg, rgba(0, 0, 0, 1) 6%, rgba(69, 45, 10, 1) 31%, rgba(24, 8, 73, 1) 59%, rgba(27, 8, 72, 1) 60%, rgba(68, 13, 64, 1) 76%);
+  background: #0b0b0b;
+}
+
+div.str-video__video-preview-container {
+  border-bottom: 5px;
+  border-right: 5px;
+  border-top: 1px;
+  border-left: 1px;
+  border-style: solid;
+  font-size: 30px;
+  border-color: #ffffff;
+  background-color: #0b0b0b;
+}
+
+div.str-video__video-placeholder {
+  border-bottom: 5px;
+  border-right: 5px;
+  border-top: 1px;
+  border-left: 1px;
+  border-style: solid;
+  font-size: 30px;
+  border-color: #ffffff;
+  background-color: #0b0b0b;
 }
 
 .group:hover.card:before {
@@ -166,12 +197,190 @@
 }
 
 .cl-socialButtonsIconButton {
-  background-color: #ffffffb2 !important;
+  background-color: #ffffff !important;
 }
 
 .str-video__participant-details {
   color: white;
 }
+
+.bg-dark-2 {
+  background-color: #0b0b0b;
+}
+
+.border-right {
+  border-right: 2px solid #fff;
+}
+
+.eth-card-border {
+  border-bottom: 5px;
+  border-right: 5px;
+  border-top: 1px;
+  border-left: 1px;
+  border-style: solid;
+  font-size: 30px;
+  border-color: #ffffff;
+  -webkit-box-shadow: 18px 12px 37px -9px rgba(79, 79, 79, 1);
+  -moz-box-shadow: 18px 12px 37px -9px rgba(79, 79, 79, 1);
+  box-shadow: 18px 12px 37px -9px rgba(79, 79, 79, 1);
+
+}
+
+.text-green {}
+
+.eth-btn-border {
+  border-bottom: 5px;
+  border-right: 5px;
+  border-top: 1px;
+  border-left: 1px;
+  border-style: solid;
+  font-size: 16px;
+  border-color: #ffffff;
+}
+
+.eth-card-border-block {
+  border-bottom: 6px;
+  border-right: 6px;
+  border-top: 1px;
+  border-left: 1px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+.str-video__composite-button__button-group .str-video__call-controls__button.str-video__menu-toggle-button {
+  background-color: #0b0b0b00 !important;
+
+}
+
+.size-12 {
+  border-radius: 100% !important;
+}
+
+.glassmorphism-1 {
+  background: rgb(173, 216, 230) !important;
+}
+
+.glassmorphism-2 {
+  background: rgb(144, 238, 144) !important;
+}
+
+.glassmorphis-3 {
+  background: rgb(230, 230, 250) !important;
+}
+
+.glassmorphism-4 {
+  background: rgb(255, 255, 224) !important;
+}
+
+.eth-card-border-bottom {
+  border-bottom: 6px;
+  border-right: 1px;
+  border-top: 1px;
+  border-left: 1px;
+  border-color: #5e5e5e;
+  border-style: solid;
+  background-size: 100% 100%;
+  /* initial background size */
+  background-position: center;
+  transition: background-size 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.eth-card-border-bottom:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+  background-image: url('');
+  background-position: center;
+  transition: transform 0.3s ease-in-out;
+  background-size: 120% 120%;
+  border-right: 6px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+.border {
+  border: 1px #fff solid;
+  border-right: 4px #fff solid;
+  border-bottom: 4px #fff solid;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.border-counter {
+  border: 0.5px #fff solid;
+  border-right: 3px #fff solid;
+  border-bottom: 3px #fff solid;
+  padding: 1px;
+  border-radius: 4px;
+}
+
+
+
+.eth-card-1 {
+  border-bottom: 6px;
+  border-right: 6px;
+  border-top: 2px;
+  border-left: 2px;
+
+  background-color: #a099ff;
+  background-image:
+    radial-gradient(at 83% 67%, rgb(152, 231, 156) 0, transparent 58%),
+    radial-gradient(at 67% 20%, hsla(357, 94%, 71%, 1) 0, transparent 59%),
+    radial-gradient(at 88% 35%, hsla(222, 81%, 65%, 1) 0, transparent 50%),
+    radial-gradient(at 31% 91%, hsla(9, 61%, 61%, 1) 0, transparent 52%),
+    radial-gradient(at 27% 71%, hsla(336, 91%, 65%, 1) 0, transparent 49%),
+    radial-gradient(at 74% 89%, hsla(30, 98%, 65%, 1) 0, transparent 51%),
+    radial-gradient(at 53% 75%, hsla(174, 94%, 68%, 1) 0, transparent 45%);
+}
+
+.eth-card-2 {
+  background-color: #a099ff;
+  background-image:
+    radial-gradient(at 15% 100%, rgb(152, 231, 156) 0, transparent 55%),
+    radial-gradient(at 75% 25%, hsla(357, 94%, 71%, 1) 0, transparent 58%),
+    radial-gradient(at 50% 50%, hsla(222, 81%, 65%, 1) 0, transparent 52%),
+    radial-gradient(at 10% 40%, hsla(9, 61%, 61%, 1) 0, transparent 50%),
+    radial-gradient(at 40% 10%, hsla(336, 91%, 65%, 1) 0, transparent 48%),
+    radial-gradient(at 80% 60%, hsla(30, 98%, 65%, 1) 0, transparent 45%),
+    radial-gradient(at 60% 80%, hsla(174, 94%, 68%, 1) 0, transparent 42%);
+}
+
+.eth-card-3 {
+  background-color: #a099ff;
+  background-image:
+    radial-gradient(at 80% 70%, rgb(152, 231, 156) 0, transparent 55%),
+    radial-gradient(at 10% 90%, hsla(357, 94%, 71%, 1) 0, transparent 58%),
+    radial-gradient(at 10% 70%, hsla(222, 81%, 65%, 1) 0, transparent 52%),
+    radial-gradient(at 90% 10%, hsla(9, 61%, 61%, 1) 0, transparent 50%),
+    radial-gradient(at 40% 10%, hsla(336, 91%, 65%, 1) 0, transparent 48%),
+    radial-gradient(at 100% 70%, hsla(30, 98%, 65%, 1) 0, transparent 45%),
+    radial-gradient(at 20% 80%, hsla(174, 94%, 68%, 1) 0, transparent 42%);
+}
+
+.eth-card-4 {
+  background-color: #a099ff;
+  background-image:
+    radial-gradient(at 90% 10%, rgb(152, 231, 156) 0, transparent 40%),
+    radial-gradient(at 10% 60%, hsla(357, 94%, 71%, 1) 0, transparent 50%),
+    radial-gradient(at 75% 25%, hsla(222, 81%, 65%, 1) 0, transparent 45%),
+    radial-gradient(at 10% 60%, hsla(9, 61%, 61%, 1) 0, transparent 48%),
+    radial-gradient(at 40% 10%, hsla(336, 91%, 65%, 1) 0, transparent 42%),
+    radial-gradient(at 80% 60%, hsla(30, 98%, 65%, 1) 0, transparent 40%),
+    radial-gradient(at 60% 80%, hsla(174, 94%, 68%, 1) 0, transparent 38%);
+}
+
+.eth-card-5 {
+  background-color: #a099ff;
+  background-image:
+    radial-gradient(at 80% 30%, rgb(152, 231, 156) 0, transparent 40%),
+    radial-gradient(at 50% 80%, hsla(357, 94%, 71%, 1) 0, transparent 50%),
+    radial-gradient(at 75% 25%, hsla(222, 81%, 65%, 1) 0, transparent 45%),
+    radial-gradient(at 70% 10%, hsla(9, 61%, 61%, 1) 0, transparent 48%),
+    radial-gradient(at 90% 70%, hsla(336, 91%, 65%, 1) 0, transparent 42%),
+    radial-gradient(at 10% 60%, hsla(30, 98%, 65%, 1) 0, transparent 40%),
+    radial-gradient(at 10% 80%, hsla(174, 94%, 68%, 1) 0, transparent 38%);
+}
+
+
 
 .str-video__menu-container {
   color: white;
@@ -191,6 +400,25 @@
 
 .str-video__call-controls__button {
   height: 40px;
+}
+
+.bg-blue-1 {
+  border: 0.5px #fff solid;
+  border-right: 3px #fff solid;
+  border-bottom: 3px #fff solid;
+  padding: 1px;
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #252525;
+}
+
+@media (max-width: 480px) {
+  .bg-blue-1 {
+    padding: 8px;
+  }
 }
 
 .glassmorphism {
@@ -219,6 +447,39 @@
   height: 40px;
 }
 
+button.bg-green-500 {
+  animation: gradientAnimate 10s infinite;
+  background-size: 200% 200%;
+  font-size: 20px;
+  padding: 20px;
+  background-color: #0b0b0b;
+  border: 1px #fff solid;
+  border-right: 4px #fff solid;
+  border-bottom: 4px #fff solid;
+}
+
+@keyframes gradientAnimate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 25% 50%;
+  }
+
+  50% {
+    background-position: 50% 50%;
+  }
+
+  75% {
+    background-position: 75% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .cl-dividerLine {
   background: #252a41;
   height: 2px;
@@ -236,8 +497,22 @@
   color: white;
 }
 
+.str-video__composite-button__button-group {
+  border: 1px solid #fff !important;
+}
+
 .str-video__composite-button__button-group:hover.str-video__composite-button__button-group--active-secondary:hover {
-  background-color: #19232d;
+  background-color: #c21616;
+  border-bottom: 5px;
+  border-right: 5px;
+  border-top: 1px;
+  border-left: 1px;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+button.str-video__call-controls__button {
+  border-radius: 100%;
 }
 
 /* =============================== */

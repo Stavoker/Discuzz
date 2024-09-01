@@ -13,6 +13,7 @@ import { Input } from './input';
 
 
 
+
 const MeetingTypeList = () => {
     const router = useRouter();
     const [meetingState, setMeetingState] =
@@ -79,30 +80,32 @@ const MeetingTypeList = () => {
             <HomeCard
                 img="/icons/add-meeting.svg"
                 title="New Meeting"
-                className="bg-[#3f61d3] "
+                className="eth-card-border-bottom"
                 description="Start an instant meeting"
                 handleClick={() => router.push('/personal-room')} />
             <HomeCard
                 img="/icons/join-meeting.svg"
                 title="Join Meeting"
                 description="via invitation link"
-                className="bg-blue-1"
+                className="eth-card-border-bottom"
                 handleClick={() => setMeetingState('isJoiningMeeting')}
             />
             <HomeCard
                 img="/icons/schedule.svg"
                 title="Schedule Meeting"
                 description="Plan your meeting"
-                className="bg-[#234f92]"
+                className="eth-card-border-bottom"
                 handleClick={() => setMeetingState('isScheduleMeeting')}
             />
             <HomeCard
                 img="/icons/recordings.svg"
                 title="View Recordings"
                 description="Meeting Recordings"
-                className="bg-[#3f90d3]"
+                className="eth-card-border-bottom"
                 handleClick={() => router.push('/recordings')}
             />
+
+         
 
             {!callDetails ? (
                 <MeetingModule

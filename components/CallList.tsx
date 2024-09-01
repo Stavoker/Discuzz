@@ -74,7 +74,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
                         key={meeting.id}
                         icon={
                             type === 'ended'
-                                ? '/icons/previous.svg'
+                                ? '/icons/prev-img.png'
                                 : type === 'upcoming'
                                     ? '/icons/upcoming.svg'
                                     : '/icons/recordings.svg'
