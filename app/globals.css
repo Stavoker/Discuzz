@@ -288,7 +288,7 @@ div.str-video__video-placeholder {
 .eth-card-border-bottom:hover {
   transform: scale(1.03);
   transition: transform 0.3s ease-in-out;
-  background-image: url('');
+  /*background-image: url('');*/
   background-position: center;
   transition: transform 0.3s ease-in-out;
   background-size: 120% 120%;

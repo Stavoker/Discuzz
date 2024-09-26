@@ -1,30 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useUser } from '@clerk/clerk-react';
 
 function TokenCounter() {
     const { user } = useUser();
-    const [tokens, setTokens] = useState(0);
+    const [tokens, setTokens] = useState(0); // Start with 0 tokens
 
-    const incrementTokens = async () => {
-        const newTokenCount = tokens + 1;
-        setTokens(newTokenCount);
+    const getBalance = async () => {
+        try {
+            const response = await fetch(`http://localhost:5002/api/users/${user.id}/tokens-balance`, {
+                method: 'GET',
+            });
 
-        // Оновлення токенів у базі даних
-        await fetch(`/api/users/${user.emailAddress}/tokens`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ tokens: newTokenCount })
-        });
+            const data = await response.json();
+            return parseInt(data.balance, 10);
+
+        } catch (error) {
+            console.error('Error fetching balance:', error);
+            return 0;
+        }
     };
 
-    return (
+    const addTokens = async (amount) => {
+        try {
+            await fetch(`http://localhost:5002/api/users/${user.id}/add-tokens?amount=${amount}`, {
+                method: 'PUT',
+            });
+        } catch (error) {
+            console.error('Error updating tokens:', error);
+        }
+    };
 
+    const incrementTokens = async () => {
+        try {
+            await addTokens(1);
+            const newBalance = await getBalance();
+            setTokens(newBalance);
+        } catch (error) {
+            console.error('Error updating tokens:', error);
+        }
+    };
+
+    useEffect(() => {
+        const fetchInitialBalance = async () => {
+            const initialBalance = await getBalance();
+            setTokens(initialBalance);
+        };
+        fetchInitialBalance().then();
+    });
+
+    return (
         <div className='flex border-counter'>
             <div className='bg-gray-800 text-white h-[40px] flex items-center w-[150px] px-2 rounded'>
-
-
                 <p>{tokens}</p>
             </div>
 
@@ -35,8 +61,6 @@ function TokenCounter() {
                 Додати
             </button>
         </div>
-
-    
     );
 }
 
