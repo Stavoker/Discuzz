@@ -3,50 +3,46 @@ import { useUser } from '@clerk/clerk-react';
 
 function TokenCounter() {
     const { user } = useUser();
-    const [tokens, setTokens] = useState(0); // Start with 0 tokens
-
-    const getBalance = async () => {
-        try {
-            const response = await fetch(`http://localhost:5002/api/users/${user.id}/tokens-balance`, {
-                method: 'GET',
-            });
-
-            const data = await response.json();
-            return parseInt(data.balance, 10);
-
-        } catch (error) {
-            console.error('Error fetching balance:', error);
-            return 0;
-        }
-    };
-
-    const addTokens = async (amount) => {
-        try {
-            await fetch(`http://localhost:5002/api/users/${user.id}/add-tokens?amount=${amount}`, {
-                method: 'PUT',
-            });
-        } catch (error) {
-            console.error('Error updating tokens:', error);
-        }
-    };
-
-    const incrementTokens = async () => {
-        try {
-            await addTokens(1);
-            const newBalance = await getBalance();
-            setTokens(newBalance);
-        } catch (error) {
-            console.error('Error updating tokens:', error);
-        }
-    };
+    const [tokens, setTokens] = useState(0);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchInitialBalance = async () => {
-            const initialBalance = await getBalance();
-            setTokens(initialBalance);
+            if (user) {
+                const response = await fetch(`/api/users/${user.id}`);
+                const data = await response.json();
+                if (response.ok) {
+                    setTokens(data.tokenBalance);
+                } else {
+                    setError(data.error);
+                }
+            }
         };
-        fetchInitialBalance().then();
-    });
+        fetchInitialBalance();
+    }, [user]);
+
+    // Function to increment tokens
+    const incrementTokens = async (amount) => {
+        if (user) {
+            try {
+                const response = await fetch(`/api/users/${user.id}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ amount }),
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    setTokens((prevTokens) => prevTokens + amount); // Update local token count
+                } else {
+                    setError(data.error);
+                }
+            } catch (error) {
+                setError(error.message);
+            }
+        }
+    };
 
     return (
         <div className='flex border-counter'>
@@ -55,11 +51,13 @@ function TokenCounter() {
             </div>
 
             <button
-                onClick={incrementTokens}
+                onClick={() => incrementTokens(1)} // Add one token
                 className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded'
             >
                 Додати
             </button>
+
+            {error && <p className="text-red-500">{error}</p>}
         </div>
     );
 }
